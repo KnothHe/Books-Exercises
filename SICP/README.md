@@ -1,8 +1,8 @@
 # SICP
 
-## solution of scheme wiki
+## solutions of scheme wiki
 
-- [SICP solution](http://community.schemewiki.org/?SICP-Solutions)
+- [SICP solutions](http://community.schemewiki.org/?SICP-Solutions)
 
 ## use racket to write scheme code
 
