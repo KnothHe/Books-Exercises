@@ -30,5 +30,6 @@
 ; (gcd 2 (r 4 2)) 1
 ; (gcd 2 0)
 ; 2
-; I guess ((1+2+3)*2+4) + (5 + 3 + 2 + 1) = 16 + 11 = 27
+; I guess ((1+2+3)*2+4) + (5 + 3 + 2 + 1) = 16 + 11 = 27 (Wrong)
+; maybe 14 + 4 (scheme wiki)
 ; I don't know, just see scheme wiki
