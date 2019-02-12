@@ -4,14 +4,14 @@
 
 - [SICP solutions](http://community.schemewiki.org/?SICP-Solutions)
 
-## use racket to write scheme code
+## run the scheme code with racket
 
 - install via `raco pkg install sicp` 
 - add `#lang sicp` on top of the source file
 - open repl with file via `racket -it filename.rkt`
 - exit repl via `(exit)`
 
-## use emacs as racket source code editor (optional)
+## write the scheme code with emacs (optional)
 
 - install spacemacs
 - add racket layer
