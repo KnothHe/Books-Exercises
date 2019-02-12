@@ -26,4 +26,4 @@
 ; time and space are both
 ; ⌈log_{3}{a/0.1}⌉
 ; (ceiling(/ (log (/ a 0.1)) (log 3)))
-; O(log3)
+; O(logN)
