@@ -20,9 +20,9 @@
 (integral cube 0 1 0.001)
 
 (define (simpson-integral f a b n)
-  (define (get-h) (/ (- b a) n))
+  (define h (/ (- b a) n))
   (define (next x) (+ x 1.0))
-  (define (term k) (f (+ a (* k (get-h)))))
+  (define (term k) (f (+ a (* k h))))
   (define (sum counter constant)
       (cond ((> counter n) 0)
             ((or (= counter 0)
@@ -36,7 +36,7 @@
             (else
              (+ (* 2 (term counter))
                 (sum (next counter) 2)))))
-  (* (/ (get-h) 3.0)
+  (* (/ h 3.0)
      (sum 0 1)))
 
 (display "Simpson integral: ")
