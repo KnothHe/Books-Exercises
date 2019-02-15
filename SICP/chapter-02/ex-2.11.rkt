@@ -38,7 +38,7 @@
 ;8. --|--   | ah*bh  | al*bl
 ; ------------------------------
 
-;9. -+|-+   | min(al, bl)*max(ah, bh) | max(al*bl, ah*bh)
+;9. -+|-+   | min(al*bh, ah*bl) | max(al*bl, ah*bh)
 ;
 ; -+|-+ include zero in interval
 
@@ -64,7 +64,7 @@
            (make-interval (* al bh) (* al bl)))
           ((and (negative? al) (negative? ah) (negative? bl) (negative? bh)) ; 8
            (make-interval (* ah bh) (* al bl)))
-          (else (make-interval (* (min al bl) (max ah bh))                   ; 9
+          (else (make-interval (min (* al bh) (* ah bl))                     ; 9
                                (max (* al bl) (* ah bh)))))))
 ; This is so ugly code
 
