@@ -18,13 +18,13 @@
   (/ (- (upper-bound i) (lower-bound i)) 2))
 
 (define (make-center-percent center percent)
-  (let ((width (* center percent)))
+  (let ((width (* center (/ percent 100.0))))
     (make-center-width center width)))
 
 (define (percent x)
-  (/ (width x) (center x)))
+  (* (/ (width x) (center x)) 100))
 
-(define x (make-center-percent 3 0.05))
+(define x (make-center-percent 10 50))
 (lower-bound x)
 (upper-bound x)
 (center x)
