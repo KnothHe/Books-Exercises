@@ -1,5 +1,6 @@
 #lang sicp
 
+;; definition of accumulate and accumulate-n
 (define (accumulate op initial sequence)
   (if (null? sequence)
       initial
@@ -24,23 +25,28 @@
               nil
               seq))
 
+;; dot-product
 (define (dot-product v w)
   (accumulate + 0 (map * v w)))
 
+;; matrix-*-vector
 (define (matrix-*-vector m v)
   (map (lambda (w)
          (dot-product w v))
        m))
 
+;; transpose
 (define (transpose mat)
   (accumulate-n cons nil mat))
 
+;; matrix-*-matrix
 (define (matrix-*-matrix m n)
   (let ((cols (transpose n)))
     (map (lambda (w)
            (matrix-*-vector m w))
          cols)))
 
+;; test
 (define v (list 1 2 3 4))
 (define w (list 5 6 7 8))
 (define matrix (list (list 1 2 3 4) (list 4 5 6 6) (list 6 7 8 9)))
@@ -50,7 +56,6 @@
 ;; 5 + 12 + 21 + 32
 ;; 70
 (dot-product v w)
-
 ;; [[1 2 3 4] [4 5 6 6] [6 7 8 9]] * [1 2 3 4]
 ;; [1 2 3 4] * [1 2 3 4]
 ;; 1*1 + 2*2 + 3*3 + 4*4
