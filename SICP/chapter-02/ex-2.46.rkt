@@ -39,3 +39,4 @@
 (add-vect vect1 vect2)
 (sub-vect vect1 vect2)
 (scale-vect 2 vect1)
+

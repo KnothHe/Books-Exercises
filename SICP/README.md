@@ -4,7 +4,7 @@
 
 - [SICP solutions](http://community.schemewiki.org/?SICP-Solutions)
 
-## [Run the scheme code with racket](https://docs.racket-lang.org/sicp-manual/#%28def._%28%28lib._sicp-pict%2Fmain..rkt%29._superpose%29%29)
+## [Run the scheme code with racket](https://docs.racket-lang.org/sicp-manual/)
 
 - install via `raco pkg install sicp` 
 - add `#lang sicp` on top of the source file
