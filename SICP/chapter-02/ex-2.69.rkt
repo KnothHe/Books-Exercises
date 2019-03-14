@@ -62,7 +62,7 @@
 
 (define (successive-merge leaf-set)
   (cond ((null? leaf-set) '())
-        ((= (length leaf-set) 1) leaf-set)
+        ((= (length leaf-set) 1) (car leaf-set))
         (else (let ((node (make-code-tree
                            (car leaf-set)
                            (cadr leaf-set))))
